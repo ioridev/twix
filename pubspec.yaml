@@ -16,6 +16,9 @@ dependencies:
   url_launcher: ^6.0.17
   flutter_hooks: ^0.18.1
   hooks_riverpod: ^1.0.0
+  flutter_signin_button: ^2.0.0
+  oauth1: ^1.0.4
+  shared_preferences: ^2.0.11
 
   cupertino_icons: ^1.0.2
 
