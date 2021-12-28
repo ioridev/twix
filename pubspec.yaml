@@ -11,6 +11,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dart_twitter_api: ^0.5.4
+  google_fonts: ^2.1.1
+  url_launcher: ^6.0.17
+  flutter_hooks: ^0.18.1
+  hooks_riverpod: ^1.0.0
 
   cupertino_icons: ^1.0.2
 
