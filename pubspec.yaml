@@ -19,6 +19,7 @@ dependencies:
   flutter_signin_button: ^2.0.0
   oauth1: ^1.0.4
   shared_preferences: ^2.0.11
+  flutter_dotenv: ^5.0.2
 
   cupertino_icons: ^1.0.2
 
