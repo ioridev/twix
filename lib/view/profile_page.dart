@@ -10,8 +10,8 @@ class ProfilePage extends StatelessWidget {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
+          children: const <Widget>[
+            Text(
               'UserID',
             ),
           ],
