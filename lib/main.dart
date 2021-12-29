@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:solarized_theme/solarized_theme.dart';
 
-void main() {
-  dotenv.load(fileName: "env/.env");
+import 'model/request/twitter_request.dart';
+
+Future<void> main() async {
+  await dotenv.load(fileName: "env/.env");
   runApp(const MyApp());
 }
 
@@ -47,7 +49,7 @@ class MyHomePage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () => oauth('iori_eth'),
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),

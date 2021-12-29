@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 
-void oauth() async {
+void oauth(String username) async {
   final _apiKey = dotenv.env['API_KEY']!;
   final _apiKeySecret = dotenv.env['API_KEY_SECRET']!;
   final base64encoded =
@@ -37,7 +37,7 @@ void oauth() async {
   });
 
   final result = await http.get(
-    Uri.parse('https://api.twitter.com/2/users/by/username/Luecy1?$params'),
+    Uri.parse('https://api.twitter.com/2/users/by/username/$username?$params'),
     headers: {'Authorization': 'Bearer ${oauthToken.accessToken}'},
   );
 
