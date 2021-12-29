@@ -47,4 +47,7 @@ app.*.map.json
 
 # env
 .env
-.env.test
+.env_test
+
+#vscode
+.vscode/launch.json
