@@ -26,10 +26,10 @@ class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
 
-  void _incrementCounter() {}
-
+  late TextEditingController _controller;
   @override
   Widget build(BuildContext context) {
+    _controller = TextEditingController();
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
@@ -39,17 +39,19 @@ class MyHomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             const Text(
-              'You have pushed the button this many times:',
+              'UserID',
             ),
-            Text(
-              'test',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+            TextField(
+                controller: _controller,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(),
+                  labelText: 'UserID',
+                ))
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => oauth('iori_eth'),
+        onPressed: () => oauth(_controller.text),
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
