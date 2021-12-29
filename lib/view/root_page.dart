@@ -17,8 +17,8 @@ class RootPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer(builder: (context, watch, child) {
-      final pageType = watch(pageTypeProvider);
+    return Consumer(builder: (context, ref, child) {
+      final pageType = ref.watch(pageTypeProvider.state);
 
       final tabItems = [
         const BottomNavigationBarItem(
