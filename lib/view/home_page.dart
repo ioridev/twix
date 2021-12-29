@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:solarized_twitter/model/request/twitter_request.dart';
+import 'package:solarized_twitter/view/profile_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
@@ -28,6 +29,10 @@ class HomePage extends StatelessWidget {
             TextButton(
               onPressed: () {
                 if (_controller.text.isNotEmpty) oauth(_controller.text);
+                Navigator.push<MaterialPageRoute<dynamic>>(
+                  context,
+                  MaterialPageRoute(builder: (context) => ProfilePage()),
+                );
               },
               child: Text('TextButton'),
             )
