@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:solarized_theme/solarized_theme.dart';
 
 void main() {
   dotenv.load(fileName: "env/.env");
@@ -13,9 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: buildSolarizedTheme(light: false),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -24,8 +23,6 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key, required this.title}) : super(key: key);
   final String title;
-
-  int _counter = 0;
 
   void _incrementCounter() {}
 
@@ -43,7 +40,7 @@ class MyHomePage extends StatelessWidget {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              'test',
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
