@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:solarized_twitter/view/message_page.dart';
+import 'package:solarized_twitter/view/notification_page.dart';
+import 'package:solarized_twitter/view/search_page.dart';
 
 import 'home_page.dart';
 
@@ -11,6 +14,9 @@ enum PageType { home, search, notification, message }
 class RootPage extends StatelessWidget {
   final List<Widget> _pageList = <Widget>[
     HomePage(),
+    SearchPage(),
+    NotificationPage(),
+    MessagePage(),
   ];
 
   RootPage({Key? key}) : super(key: key);
