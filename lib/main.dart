@@ -46,12 +46,18 @@ class MyHomePage extends StatelessWidget {
                 decoration: InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'UserID',
-                ))
+                )),
+            TextButton(
+              onPressed: () {
+                if (_controller.text.isNotEmpty) oauth(_controller.text);
+              },
+              child: Text('TextButton'),
+            )
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () => oauth(_controller.text),
+        onPressed: () => null,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),
