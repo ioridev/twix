@@ -19,7 +19,7 @@ dependencies:
   flutter_hooks: ^0.18.1
   hooks_riverpod: ^1.0.0
   flutter_signin_button: ^2.0.0
-  oauth1: ^1.0.4
+  oauth1: ^2.0.0
   shared_preferences: ^2.0.11
   flutter_dotenv: ^5.0.2
   shimmer: ^2.0.0
