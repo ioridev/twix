@@ -31,7 +31,10 @@ class HomePage extends StatelessWidget {
                 if (_controller.text.isNotEmpty) oauth(_controller.text);
                 Navigator.push<MaterialPageRoute<dynamic>>(
                   context,
-                  MaterialPageRoute(builder: (context) => ProfilePage()),
+                  MaterialPageRoute(
+                      builder: (context) => ProfilePage(
+                            userId: _controller.text,
+                          )),
                 );
               },
               child: Text('TextButton'),

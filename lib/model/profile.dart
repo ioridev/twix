@@ -8,7 +8,7 @@ class Profile {
       required this.id,
       required this.pinnedTweetId,
       required this.createdAt,
-      required this.includes});
+      this.includes});
 
   String name;
   String username;
@@ -16,14 +16,14 @@ class Profile {
   String id;
   String pinnedTweetId;
   DateTime createdAt;
-  Tweet includes;
+  Tweet? includes;
 
   Profile.fromJson(Map<String, dynamic> json)
-      : id = json['id'] as String,
-        name = json['name'] as String,
-        username = json['username'] as String,
-        description = json['description'] as String,
+      : id = json['id'].toString(),
+        name = json['name'].toString(),
+        username = json['username'].toString(),
+        description = json['description'].toString(),
         createdAt = DateTime.parse(json['created_at'].toString()),
-        pinnedTweetId = json['pinned_tweet_id'].toString(),
-        includes = Tweet.fromJson(json['includes'] as Map<String, dynamic>);
+        pinnedTweetId = json['pinned_tweet_id'].toString();
+  // includes = Tweet.fromJson(json['includes'] as Map<String, dynamic>);
 }

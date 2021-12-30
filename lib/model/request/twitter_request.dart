@@ -1,6 +1,8 @@
 import 'dart:convert';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
+import 'package:solarized_twitter/model/profile.dart';
+import 'package:solarized_twitter/provider/profile.dart';
 
 void oauth(String username) async {
   final _apiKey = dotenv.env['API_KEY']!;
@@ -41,7 +43,10 @@ void oauth(String username) async {
     headers: {'Authorization': 'Bearer ${oauthToken.accessToken}'},
   );
 
-  print(result.body);
+  final json = jsonDecode(result.body) as Map<String, dynamic>;
+  final profile = Profile.fromJson(json['data']);
+
+  print(profile);
 }
 
 class OauthToken {

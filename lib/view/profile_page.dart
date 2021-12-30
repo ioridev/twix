@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
+  ProfilePage({Key? key, required String userId}) : super(key: key);
+
   late TextEditingController _controller;
   @override
   Widget build(BuildContext context) {
