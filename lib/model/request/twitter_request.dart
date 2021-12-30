@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:solarized_twitter/model/profile.dart';
 import 'package:solarized_twitter/provider/profile.dart';
 
-void oauth(String username) async {
+void getUserProfile(String username) async {
   final _apiKey = dotenv.env['API_KEY']!;
   final _apiKeySecret = dotenv.env['API_KEY_SECRET']!;
   final base64encoded =
