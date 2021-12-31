@@ -45,7 +45,7 @@ Future<Profile> getUserProfile(String username) async {
   final json = jsonDecode(result.body) as Map<String, dynamic>;
   final profile = Profile.fromJson(json['data']);
 
-  print(profile);
+  print(json);
   return profile;
 }
 
