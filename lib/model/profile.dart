@@ -1,18 +1,18 @@
 import 'package:solarized_twitter/model/tweet.dart';
 
 class Profile {
-  Profile(
-      {required this.name,
-      required this.username,
-      required this.description,
-      required this.id,
-      required this.url,
-      required this.verifled,
-      required this.location,
-      required this.profileImageUrl,
-      required this.pinnedTweetId,
-      required this.createdAt,
-      required this.tweets});
+  Profile({
+    required this.name,
+    required this.username,
+    required this.description,
+    required this.id,
+    required this.url,
+    required this.verifled,
+    required this.location,
+    required this.profileImageUrl,
+    required this.pinnedTweetId,
+    required this.createdAt,
+  });
 
   String name;
   String username;
@@ -24,7 +24,6 @@ class Profile {
   String profileImageUrl;
   String pinnedTweetId;
   DateTime createdAt;
-  String tweets;
 
   Profile.fromJson(Map<String, dynamic> json)
       : id = json['id'].toString(),
@@ -36,6 +35,5 @@ class Profile {
         location = json['location'].toString(),
         profileImageUrl = json['profile_image_url'].toString(),
         createdAt = DateTime.parse(json['created_at'].toString()),
-        tweets = json['includes'].toString(),
         pinnedTweetId = json['pinned_tweet_id'].toString();
 }

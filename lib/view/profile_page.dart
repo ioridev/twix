@@ -26,7 +26,6 @@ class ProfilePage extends HookConsumerWidget {
                 Text(data.createdAt.toString()),
                 Text(data.location),
                 Text(data.pinnedTweetId),
-                Text(data.tweets),
               ]))
             : const Text('userData is empty.'),
         error: (error, _) => Text(error.toString()),
