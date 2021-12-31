@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:solarized_twitter/model/profile.dart';
-import 'package:solarized_twitter/provider/profile.dart';
 
 Future<Profile> getUserProfile(String username) async {
   final _apiKey = dotenv.env['API_KEY']!;
