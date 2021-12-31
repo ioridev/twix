@@ -24,6 +24,10 @@ Future<Profile> getUserProfile(String username) async {
     'expansions': ['pinned_tweet_id'],
     'user.fields': [
       'name',
+      'location',
+      'profile_image_url',
+      'verified',
+      'url',
       'created_at',
       'description',
     ],

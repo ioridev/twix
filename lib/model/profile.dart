@@ -6,6 +6,9 @@ class Profile {
     required this.username,
     required this.description,
     required this.id,
+    required this.verifled,
+    required this.location,
+    required this.profileImageUrl,
     required this.pinnedTweetId,
     required this.createdAt,
   });
@@ -14,6 +17,9 @@ class Profile {
   String username;
   String description;
   String id;
+  bool verifled;
+  String location;
+  String profileImageUrl;
   String pinnedTweetId;
   DateTime createdAt;
 
@@ -22,6 +28,9 @@ class Profile {
         name = json['name'].toString(),
         username = json['username'].toString(),
         description = json['description'].toString(),
+        verifled = json['verified'] as bool,
+        location = json['location'].toString(),
+        profileImageUrl = json['profile_image_url'].toString(),
         createdAt = DateTime.parse(json['created_at'].toString()),
         pinnedTweetId = json['pinned_tweet_id'].toString();
 }
