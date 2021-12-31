@@ -45,6 +45,7 @@ Future<Profile> getUserProfile(String username) async {
     Uri.parse('https://api.twitter.com/2/users/by/username/$username?$params'),
     headers: {'Authorization': 'Bearer ${oauthToken.accessToken}'},
   );
+  print(result.body);
 
   final json = jsonDecode(result.body) as Map<String, dynamic>;
   final profile = Profile.fromJson(json['data']);
