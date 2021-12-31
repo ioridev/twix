@@ -22,7 +22,7 @@ class HomePage extends StatelessWidget {
             ),
             TextField(
                 controller: _controller,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   border: OutlineInputBorder(),
                   labelText: 'UserID',
                 )),
@@ -39,7 +39,7 @@ class HomePage extends StatelessWidget {
                   );
                 }
               },
-              child: Text('TextButton'),
+              child: const Text('ユーザー検索'),
             )
           ],
         ),
