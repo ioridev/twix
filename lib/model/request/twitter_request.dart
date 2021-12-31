@@ -3,7 +3,7 @@ import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
 import 'package:solarized_twitter/model/profile.dart';
 
-Future<Profile> getUserProfile(String username) async {
+Future<OauthToken> getOauthToken() async {
   final _apiKey = dotenv.env['API_KEY']!;
   final _apiKeySecret = dotenv.env['API_KEY_SECRET']!;
   final base64encoded =
@@ -18,7 +18,10 @@ Future<Profile> getUserProfile(String username) async {
   print(response.body);
 
   final oauthToken = OauthToken.fromJson(jsonDecode(response.body));
+  return oauthToken;
+}
 
+Future<Profile> getUserProfile(String username) async {
   // Map<String,List<String>>
   final queryParameters = {
     'expansions': ['pinned_tweet_id'],
@@ -32,6 +35,8 @@ Future<Profile> getUserProfile(String username) async {
       'description',
     ],
   };
+
+  final oauthToken = await getOauthToken();
 
   // join request queryParameters
   final params = queryParameters.entries.map((paramEntry) {
