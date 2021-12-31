@@ -17,7 +17,13 @@ class ProfilePage extends HookConsumerWidget {
         body: Center(
           child: userData.when(
             data: (data) => data.name.isNotEmpty
-                ? Text(data.name)
+                ? SingleChildScrollView(
+                    child: Column(children: <Widget>[
+                    Text(data.name),
+                    Text(data.username),
+                    Text(data.description),
+                    Text(data.createdAt.toString()),
+                  ]))
                 : const Text('userData is empty.'),
             error: (error, _) => Text(error.toString()),
             loading: () => const CircularProgressIndicator(),
