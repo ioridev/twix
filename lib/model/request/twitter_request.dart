@@ -89,7 +89,7 @@ Future login() async {
   /// to ensure the correct users account is authorized.
   /// If you want to implement Twitter account switching, set [force_login] to true
   /// login(forceLogin: true);
-  final authResult = await twitterLogin.login();
+  final authResult = await twitterLogin.loginV2();
   switch (authResult.status) {
     case TwitterLoginStatus.loggedIn:
       // success

@@ -40,6 +40,12 @@ class HomePage extends StatelessWidget {
                 }
               },
               child: const Text('ユーザー検索'),
+            ),
+            TextButton(
+              onPressed: () {
+                login();
+              },
+              child: const Text('ログイン'),
             )
           ],
         ),
