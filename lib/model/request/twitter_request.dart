@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;
-import 'package:solarized_twitter/model/profile.dart';
+import 'package:twix/model/profile.dart';
 import 'package:twitter_login/twitter_login.dart';
 
 final apiKey = dotenv.env['API_KEY']!;
@@ -82,7 +82,7 @@ Future login() async {
     /// Registered Callback URLs in TwitterApp
     /// Android is a deeplink
     /// iOS is a URLScheme
-    redirectURI: 'cm-app://dev.iori.solarized_twitter',
+    redirectURI: 'cm-app://dev.iori.twix',
   );
 
   /// Forces the user to enter their credentials

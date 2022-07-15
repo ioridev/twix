@@ -1,3 +1,3 @@
-# solarized_twitter
+# twix
 
-[WIP] Cross-Platform Twitter Client　　
+[WIP] Cross-Platform Twitter Client

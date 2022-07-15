@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
-project(solarized_twitter LANGUAGES CXX)
+project(twix LANGUAGES CXX)
 
-set(BINARY_NAME "solarized_twitter")
+set(BINARY_NAME "twix")
 
 cmake_policy(SET CMP0063 NEW)
 

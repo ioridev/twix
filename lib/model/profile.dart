@@ -1,4 +1,4 @@
-import 'package:solarized_twitter/model/tweet.dart';
+import 'package:twix/model/tweet.dart';
 
 class Profile {
   Profile({

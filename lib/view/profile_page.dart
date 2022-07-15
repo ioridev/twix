@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:solarized_twitter/model/profile.dart';
-import 'package:solarized_twitter/provider/profile.dart';
+import 'package:twix/model/profile.dart';
+import 'package:twix/provider/profile.dart';
 
 class ProfilePage extends HookConsumerWidget {
   const ProfilePage({Key? key, required String this.userId}) : super(key: key);

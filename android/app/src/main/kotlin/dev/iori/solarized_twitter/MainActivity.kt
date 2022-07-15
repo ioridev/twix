@@ -1,4 +1,4 @@
-package dev.iori.solarized_twitter
+package dev.iori.twix
 
 import io.flutter.embedding.android.FlutterActivity
 

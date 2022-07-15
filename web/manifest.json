@@ -1,6 +1,6 @@
 {
-    "name": "solarized_twitter",
-    "short_name": "solarized_twitter",
+    "name": "twix",
+    "short_name": "twix",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

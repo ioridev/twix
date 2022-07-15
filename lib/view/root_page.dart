@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:solarized_twitter/view/message_page.dart';
-import 'package:solarized_twitter/view/notification_page.dart';
-import 'package:solarized_twitter/view/search_page.dart';
+import 'package:twix/view/message_page.dart';
+import 'package:twix/view/notification_page.dart';
+import 'package:twix/view/search_page.dart';
 
 import 'home_page.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:solarized_twitter/model/request/twitter_request.dart';
-import 'package:solarized_twitter/view/profile_page.dart';
+import 'package:twix/model/request/twitter_request.dart';
+import 'package:twix/view/profile_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);

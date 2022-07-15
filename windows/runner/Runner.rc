@@ -92,10 +92,10 @@ BEGIN
             VALUE "CompanyName", "dev.iori" "\0"
             VALUE "FileDescription", "A new Flutter project." "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "solarized_twitter" "\0"
+            VALUE "InternalName", "twix" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2021 dev.iori. All rights reserved." "\0"
-            VALUE "OriginalFilename", "solarized_twitter.exe" "\0"
-            VALUE "ProductName", "solarized_twitter" "\0"
+            VALUE "OriginalFilename", "twix.exe" "\0"
+            VALUE "ProductName", "twix" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
